@@ -16,22 +16,22 @@
   <meta name="author" content="PuJunXi">
   <meta name="keywords" content="">
   
-    <meta name="description" content="P1700 [USACO19OPEN] Milk Factory B Solution Portal 题意 一张有向图，有 nnn 个点，n−1n-1n−1 条边，求一个所有点都能到的点，且编号最小，无解输出 −1-1−1。 思路 由于数据较小（1≤n≤1001\leq n\leq1001≤n≤100），所以可以暴力。 每个点都能到达，也就是从一个点搜到的所有点的数量是 n−1n-1n−1。 建立">
+    <meta name="description" content="UVA10129 Play on Words Solution Portal(UVa) Portal(Luogu) 题意 一张有向图是否是半欧拉图。 欧拉图 - OI Wiki 思路 虽然输入是字符串，但只要求首尾相连，只需将字符串首尾记录建图。 有向图是半欧拉图当且仅当：   非零度顶点是弱连通的   至多一个顶点的出度与入度之差为 111   至多一个顶点的入度与出度之差为 111   其他顶">
 <meta property="og:type" content="article">
-<meta property="og:title" content="P1700 [USACO19OPEN] Milk Factory B Solution">
-<meta property="og:url" content="http://example.com/2024/01/23/solution/P1700-[USACO19OPEN]-Milk-Factory-B-Solution/index.html">
+<meta property="og:title" content="UVA10129 Play on Words Solution">
+<meta property="og:url" content="http://example.com/2024/01/26/solution/UVA10129-Play-on-Words-Solution/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="P1700 [USACO19OPEN] Milk Factory B Solution Portal 题意 一张有向图，有 nnn 个点，n−1n-1n−1 条边，求一个所有点都能到的点，且编号最小，无解输出 −1-1−1。 思路 由于数据较小（1≤n≤1001\leq n\leq1001≤n≤100），所以可以暴力。 每个点都能到达，也就是从一个点搜到的所有点的数量是 n−1n-1n−1。 建立">
+<meta property="og:description" content="UVA10129 Play on Words Solution Portal(UVa) Portal(Luogu) 题意 一张有向图是否是半欧拉图。 欧拉图 - OI Wiki 思路 虽然输入是字符串，但只要求首尾相连，只需将字符串首尾记录建图。 有向图是半欧拉图当且仅当：   非零度顶点是弱连通的   至多一个顶点的出度与入度之差为 111   至多一个顶点的入度与出度之差为 111   其他顶">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-01-23T06:46:11.000Z">
-<meta property="article:modified_time" content="2024-02-01T07:56:13.357Z">
+<meta property="article:published_time" content="2024-01-26T13:09:57.000Z">
+<meta property="article:modified_time" content="2024-02-01T08:04:29.031Z">
 <meta property="article:author" content="PuJunXi">
 <meta property="article:tag" content="Solution">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>P1700 [USACO19OPEN] Milk Factory B Solution - Hexo</title>
+  <title>UVA10129 Play on Words Solution - Hexo</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -238,7 +238,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="P1700 [USACO19OPEN] Milk Factory B Solution"></span>
+            <span id="subtitle" data-typed-text="UVA10129 Play on Words Solution"></span>
           
         </div>
 
@@ -249,8 +249,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-01-23 14:46" pubdate>
-          2024年1月23日 下午
+        <time datetime="2024-01-26 21:09" pubdate>
+          2024年1月26日 晚上
         </time>
       </span>
     
@@ -261,7 +261,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          311 字
+          464 字
         
       </span>
     
@@ -272,7 +272,7 @@
         
         
         
-          3 分钟
+          4 分钟
         
       </span>
     
@@ -309,22 +309,40 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">P1700 [USACO19OPEN] Milk Factory B Solution</h1>
+            <h1 id="seo-header">UVA10129 Play on Words Solution</h1>
             
             
               <div class="markdown-body">
                 
-                <h1>P1700 [USACO19OPEN] Milk Factory B Solution</h1>
-<p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1700">Portal</a></p>
+                <h1>UVA10129 Play on Words Solution</h1>
+<p><a target="_blank" rel="noopener" href="https://onlinejudge.org/index.php?option=com_onlinejudge&amp;Itemid=8&amp;category=13&amp;page=show_problem&amp;problem=1070">Portal(UVa)</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/UVA10129">Portal(Luogu)</a></p>
 <h2 id="题意">题意</h2>
-<p>一张有向图，有 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">n</span></span></span></span> 个点，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">n-1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6667em;vertical-align:-0.0833em;"></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span></span></span></span> 条边，求一个所有点都能到的点，且编号最小，无解输出 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">-1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">−</span><span class="mord">1</span></span></span></span>。</p>
+<p>一张有向图是否是半欧拉图。</p>
+<p><a target="_blank" rel="noopener" href="https://oi-wiki.org//graph/euler/">欧拉图 - OI Wiki</a></p>
 <h2 id="思路">思路</h2>
-<p>由于数据较小（<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>≤</mo><mi>n</mi><mo>≤</mo><mn>100</mn></mrow><annotation encoding="application/x-tex">1\leq n\leq100</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7804em;vertical-align:-0.136em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7719em;vertical-align:-0.136em;"></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">100</span></span></span></span>），所以可以暴力。</p>
-<p>每个点都能到达，也就是从一个点搜到的所有点的数量是 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">n-1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6667em;vertical-align:-0.0833em;"></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span></span></span></span>。</p>
-<p>建立一个桶，存放每个点被搜到的次数。</p>
-<p>如果满足条件则直接输出，因为枚举桶的顺序保证答案最小。</p>
+<p>虽然输入是字符串，但只要求首尾相连，只需将字符串首尾记录建图。</p>
+<p>有向图是半欧拉图当且仅当：</p>
+<ul>
+<li>
+<p>非零度顶点是弱连通的</p>
+</li>
+<li>
+<p>至多一个顶点的出度与入度之差为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span></span></span></span></p>
+</li>
+<li>
+<p>至多一个顶点的入度与出度之差为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span></span></span></span></p>
+</li>
+<li>
+<p>其他顶点的入度和出度相等</p>
+</li>
+</ul>
+<p>首先判断连通性，dfs 就好。</p>
+<p>其次是各个点的判断，在输入时记录入度出度，循环判断。</p>
+<p>于是乎问题就解决了。</p>
+<p>注意，多测清空（UVa 都这样）。</p>
 <h2 id="Code">Code</h2>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;cstdio&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;cstring&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;vector&gt;</span></span><br>std::vector &lt;std::vector&lt;<span class="hljs-type">int</span>&gt;&gt; g;  <span class="hljs-comment">// 邻接表</span><br>std::vector &lt;<span class="hljs-type">int</span>&gt; f;  <span class="hljs-comment">// 桶</span><br><span class="hljs-type">bool</span> vis[<span class="hljs-number">105</span>];  <span class="hljs-comment">// 标记</span><br><span class="hljs-type">int</span> n,u,v;<br><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">dfs</span><span class="hljs-params">(<span class="hljs-type">int</span> u)</span></span>&#123;  <span class="hljs-comment">// 深搜</span><br>    <span class="hljs-keyword">if</span>(vis[u]) <span class="hljs-keyword">return</span>;<br>    vis[u]=<span class="hljs-number">1</span>;<br>    <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">0</span>;i&lt;g[u].<span class="hljs-built_in">size</span>();i++)&#123;<br>        f[g[u][i]]++;  <span class="hljs-comment">// 对应桶加1</span><br>        <span class="hljs-built_in">dfs</span>(g[u][i]);<br>    &#125;<br>&#125;<br><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">solve</span><span class="hljs-params">()</span></span>&#123;<br>    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d&quot;</span>,&amp;n);<br>    f.<span class="hljs-built_in">resize</span>(n+<span class="hljs-number">1</span>,<span class="hljs-number">0</span>);<br>    g.<span class="hljs-built_in">resize</span>(n+<span class="hljs-number">1</span>);<br>    <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">1</span>;i&lt;n;i++)&#123;<br>        <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d%d&quot;</span>,&amp;u,&amp;v);<br>        g[u].<span class="hljs-built_in">push_back</span>(v);  <span class="hljs-comment">// 建边</span><br>    &#125;<br>    <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">1</span>;i&lt;=n;i++)&#123;<br>        <span class="hljs-built_in">memset</span>(vis,<span class="hljs-number">0</span>,<span class="hljs-built_in">sizeof</span>(vis));  <span class="hljs-comment">// 每搜一遍要清空</span><br>        <span class="hljs-built_in">dfs</span>(i); <br>    &#125;<br>    <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">1</span>;i&lt;=n;i++)&#123;<br>        <span class="hljs-keyword">if</span>(f[i]==n<span class="hljs-number">-1</span>)&#123;  <span class="hljs-comment">// 满足条件</span><br>            <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%d&quot;</span>,i);<br>            <span class="hljs-keyword">return</span>;<br>        &#125;<br>    &#125;<br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;-1&quot;</span>); <span class="hljs-comment">//  无解</span><br>&#125;<br><span class="hljs-function"><span class="hljs-type">signed</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>&#123;<br>    <span class="hljs-built_in">solve</span>();<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;cmath&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;cstring&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;iostream&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;vector&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">define</span> visit <span class="hljs-keyword">if</span>(f) break;</span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br>vector &lt;<span class="hljs-type">int</span>&gt; g[<span class="hljs-number">50</span>];<br><span class="hljs-type">int</span> in[<span class="hljs-number">50</span>],out[<span class="hljs-number">50</span>];<br><span class="hljs-type">bool</span> vis[<span class="hljs-number">50</span>];<br><span class="hljs-type">int</span> t,n;<br>string s;<br><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">dfs</span><span class="hljs-params">(<span class="hljs-type">int</span> u)</span></span>&#123;<br>    <span class="hljs-keyword">if</span>(vis[u]) <span class="hljs-keyword">return</span>;<br>    vis[u]=<span class="hljs-number">1</span>;<br>    <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">0</span>;i&lt;g[u].<span class="hljs-built_in">size</span>();i++) <span class="hljs-built_in">dfs</span>(g[u][i]);<br>&#125;<br><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">solve</span><span class="hljs-params">()</span></span>&#123;<br>    cin&gt;&gt;t;<br>    <span class="hljs-keyword">while</span>(t--)&#123;<br>        cin&gt;&gt;n;<br>        <span class="hljs-type">bool</span> f=<span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">0</span>;i&lt;=<span class="hljs-number">26</span>;++i) g[i].<span class="hljs-built_in">clear</span>();<br>        <span class="hljs-built_in">memset</span>(in,<span class="hljs-number">0</span>,<span class="hljs-keyword">sizeof</span> in);<br>        <span class="hljs-built_in">memset</span>(out,<span class="hljs-number">0</span>,<span class="hljs-keyword">sizeof</span> out);<br>        <span class="hljs-built_in">memset</span>(vis,<span class="hljs-number">0</span>,<span class="hljs-keyword">sizeof</span> vis);<br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">1</span>;i&lt;=n;i++)&#123;<br>            cin&gt;&gt;s;<br>            <span class="hljs-type">int</span> u=s[<span class="hljs-number">0</span>]-<span class="hljs-string">&#x27;a&#x27;</span>+<span class="hljs-number">1</span>,v=s[s.<span class="hljs-built_in">size</span>()<span class="hljs-number">-1</span>]-<span class="hljs-string">&#x27;a&#x27;</span>+<span class="hljs-number">1</span>;<br>            in[v]++,out[u]++;<br>            g[u].<span class="hljs-built_in">push_back</span>(v),g[v].<span class="hljs-built_in">push_back</span>(u);<br>        &#125;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">1</span>;i&lt;=<span class="hljs-number">26</span>;i++)&#123;<br>            <span class="hljs-keyword">if</span>(in[i]||out[i])&#123;<br>                <span class="hljs-built_in">dfs</span>(i);<br>                <span class="hljs-keyword">break</span>;<br>            &#125;<br>        &#125;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">1</span>;i&lt;=<span class="hljs-number">26</span>;i++)&#123;<br>            <span class="hljs-function">visit</span><br><span class="hljs-function">            <span class="hljs-title">if</span><span class="hljs-params">((in[i]||out[i])&amp;&amp;vis[i]==<span class="hljs-number">0</span>)</span></span>&#123;<br>                cout&lt;&lt;<span class="hljs-string">&quot;The door cannot be opened.&quot;</span>&lt;&lt;endl;<br>                f=<span class="hljs-number">1</span>;<br>                <span class="hljs-keyword">break</span>;<br>            &#125;<br>        &#125;<br>        <span class="hljs-type">int</span> x=<span class="hljs-number">0</span>,y=<span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">1</span>;i&lt;=<span class="hljs-number">26</span>;i++)&#123;<br>            <span class="hljs-function">visit</span><br><span class="hljs-function">            <span class="hljs-title">if</span><span class="hljs-params">(abs(in[i]-out[i])&gt;<span class="hljs-number">1</span>)</span></span>&#123;<br>                cout&lt;&lt;<span class="hljs-string">&quot;The door cannot be opened.&quot;</span>&lt;&lt;endl;<br>                f=<span class="hljs-number">1</span>;<br>                <span class="hljs-keyword">break</span>;<br>            &#125;<br>            <span class="hljs-keyword">if</span>(in[i]==out[i]+<span class="hljs-number">1</span>)&#123;<br>                x++;<br>                <span class="hljs-keyword">if</span>(x==<span class="hljs-number">2</span>)&#123;<br>                    cout&lt;&lt;<span class="hljs-string">&quot;The door cannot be opened.&quot;</span>&lt;&lt;endl;<br>                    f=<span class="hljs-number">1</span>;<br>                    <span class="hljs-keyword">break</span>;<br>                &#125;<br>            &#125;<br>            <span class="hljs-keyword">if</span>(in[i]==out[i]<span class="hljs-number">-1</span>)&#123;<br>                y++;<br>                <span class="hljs-keyword">if</span>(y==<span class="hljs-number">2</span>)&#123;<br>                    cout&lt;&lt;<span class="hljs-string">&quot;The door cannot be opened.&quot;</span>&lt;&lt;endl;<br>                    f=<span class="hljs-number">1</span>;<br>                    <span class="hljs-keyword">break</span>;<br>                &#125;<br>            &#125;<br>        &#125;<br>        <span class="hljs-keyword">if</span>(!f) cout&lt;&lt;<span class="hljs-string">&quot;Ordering is possible.&quot;</span>&lt;&lt;endl;<br>    &#125;<br>&#125;<br><span class="hljs-function"><span class="hljs-type">signed</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>&#123;<br>    <span class="hljs-built_in">solve</span>();<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
                 
               </div>
             
@@ -348,8 +366,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>P1700 [USACO19OPEN] Milk Factory B Solution</div>
-      <div>http://example.com/2024/01/23/solution/P1700-[USACO19OPEN]-Milk-Factory-B-Solution/</div>
+      <div>UVA10129 Play on Words Solution</div>
+      <div>http://example.com/2024/01/26/solution/UVA10129-Play-on-Words-Solution/</div>
     </div>
     <div class="license-meta">
       
@@ -361,7 +379,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年1月23日</div>
+          <div>2024年1月26日</div>
         </div>
       
       
@@ -405,9 +423,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2024/01/26/solution/UVA10129-Play-on-Words-Solution/" title="UVA10129 Play on Words Solution">
+                      <a href="/2024/01/29/solution/UVA11687-Digits-Solution/" title="UVA11687 Digits Solution">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">UVA10129 Play on Words Solution</span>
+                        <span class="hidden-mobile">UVA11687 Digits Solution</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -415,8 +433,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2024/01/22/solution/UVA11518-Dominos-2-Solution/" title="UVA11518 Dominos 2 Solution">
-                        <span class="hidden-mobile">UVA11518 Dominos 2 Solution</span>
+                      <a href="/2024/01/23/solution/P1700-%5BUSACO19OPEN%5D-Milk-Factory-B-Solution/" title="P1700 [USACO19OPEN] Milk Factory B Solution">
+                        <span class="hidden-mobile">P1700 [USACO19OPEN] Milk Factory B Solution</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
