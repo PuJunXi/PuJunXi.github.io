@@ -17,8 +17,8 @@
   <meta name="keywords" content="">
   
     <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/index.html">
+<meta property="og:title" content="归档">
+<meta property="og:url" content="http://example.com/archives/2024/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:author" content="PuJunXi">
@@ -26,7 +26,7 @@
   
   
   
-  <title>Hexo</title>
+  <title>归档 - Hexo</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -107,7 +107,7 @@
   <header>
     
 
-<div class="header-inner" style="height: 100vh;">
+<div class="header-inner" style="height: 60vh;">
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand" href="/">
@@ -225,17 +225,13 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Welcome!"></span>
+            <span id="subtitle" data-typed-text="归档"></span>
           
         </div>
 
         
       </div>
 
-      
-        <div class="scroll-down-bar">
-          <i class="iconfont icon-arrowdown"></i>
-        </div>
       
     </div>
   </div>
@@ -249,173 +245,28 @@
     
       <div class="container nopadding-x-md">
         <div id="board"
-          style="margin-top: 0">
+          >
           
           <div class="container">
             <div class="row">
               <div class="col-12 col-md-10 m-auto">
                 
 
-
-  <div class="row mx-auto index-card">
+<div class="list-group">
+  <p class="h4">共计 4 篇文章</p>
+  <hr>
+  
+  
     
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2024/01/09/solution/AtCoder-ABC335D-Loong-and-Takahashi-Solution/" target="_blank">
-          AtCoder ABC335D Loong and Takahashi Solution
-        </a>
-      </h2>
-
       
-      <a class="index-excerpt index-excerpt__noimg" href="/2024/01/09/solution/AtCoder-ABC335D-Loong-and-Takahashi-Solution/" target="_blank">
-        <div>
-          AtCoder ABC335D Loong and Takahashi SolutionPortal(AT) Portal(Luogu) 龙年元素好评！ Part 1赛时看了半天翻译，没看懂（ 但是样例简单明了，就是蛇形方阵加强版（$3 \leq N \leq 45$），矩阵中央变成 T。 样例如下：  123451 2 3 4 516 17 18 19 615 24 T 20 714 23 22
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2024-01-09 06:55" pubdate>
-              2024-01-09
-            </time>
-          </div>
-        
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Solution/">#Solution</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
+      <p class="h5">2024</p>
     
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2023/12/16/solution/AtCoder-ABC333C-Repunit-Trio-Solution/" target="_blank">
-          AtCoder ABC333C Repunit Trio Solution
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2023/12/16/solution/AtCoder-ABC333C-Repunit-Trio-Solution/" target="_blank">
-        <div>
-          AtCoder ABC333C Repunit Trio SolutionPortal(AT) Portal(Luogu) 思路我刚看到这题就想到了搜索。 具体如下，搜出所有的三个 repunits 之和，输出第 $n$ 项，这样就完成了。 不过需要排序和去重，如果开 bool 数组（桶），观察样例3可知三个 repunits 之和最高可达 $10^{12}$ 左右，不可能开这么大的数组。 所以经
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2023-12-16 21:43" pubdate>
-              2023-12-16
-            </time>
-          </div>
-        
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Solution/">#Solution</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2023/11/12/solution/AtCoder-ABC328D-Take-ABC-Solution/" target="_blank">
-          AtCoder ABC328D Take ABC Solution
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2023/11/12/solution/AtCoder-ABC328D-Take-ABC-Solution/" target="_blank">
-        <div>
-          AtCoder ABC328D Take ABC Solution前置芝士栈的运用 思路这道题给定一个字符串，要求删除符合标准的子串。 数据达到了 $2 \times 10^5$，不能用朴素的 $\Theta(n^2)$ 算法。 这不由得想到栈。 我们只需要不断将字符入栈，一旦满足条件就将其出栈，最后剩下的就是答案了。 $Code$C++ 1234567891011121314#include&l
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2023-11-12 15:23" pubdate>
-              2023-11-12
-            </time>
-          </div>
-        
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Solution/">#Solution</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2023/10/23/solution/AtCoder-ABC325C-Sensors-Solution/" target="_blank">
-          AtCoder ABC325C Sensors Solution
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2023/10/23/solution/AtCoder-ABC325C-Sensors-Solution/" target="_blank">
-        <div>
-          AtCoder ABC325C Sensors Solution这道题是非常典型的搜索题，而且是联通块。 我们可以用广度优先搜索来搜联通块，搜完一个传感器就将其置为 .。 整个题目的思路和 P1451 求细胞数量 完全一样，只需要把数组开到 $1000$ 就行。 赛时 AC 代码 嫌麻烦的看这里： （压了行） 12345678910111213141516171819202122232425262
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2023-10-23 21:20" pubdate>
-              2023-10-23
-            </time>
-          </div>
-        
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Solution/">#Solution</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
+    <a href="/2024/01/09/solution/AtCoder-ABC335D-Loong-and-Takahashi-Solution/" class="list-group-item list-group-item-action">
+      <time>01-09</time>
+      <div class="list-group-item-title">AtCoder ABC335D Loong and Takahashi Solution</div>
+    </a>
+  
+</div>
 
 
 
