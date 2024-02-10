@@ -2279,3 +2279,29 @@ input[type=checkbox] {
     margin-left: 1rem;
   }
 }
+.sub-menu {
+  display: none;
+  position: relative;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  background-color: rgba(0,0,0,0.2);
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  width: auto;
+  height: auto;
+  box-shadow: -6px 6px 8px #000;
+}
+.sub-menu .li {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.nav-item:hover .sub-menu {
+  display: block;
+}
+ul {
+  list-style: none;
+}
+li.nav-item {
+  padding: 0 5px;
+}
