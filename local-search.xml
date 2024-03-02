@@ -23,25 +23,6 @@
   
   
   <entry>
-    <title>聊天室</title>
-    <link href="/2024/02/04/mix/%E8%81%8A%E5%A4%A9%E5%AE%A4/"/>
-    <url>/2024/02/04/mix/%E8%81%8A%E5%A4%A9%E5%AE%A4/</url>
-    
-    <content type="html"><![CDATA[<p><a href="https://note.ms/pujunxi">实时聊天</a></p><h1>聊天室</h1><p>这是来自 <a href="https://pujunxi.github.io/">PuJunXI</a> 的聊天室。</p><p>由于 <a href="https://note.ms">Note.ms</a> 不设置密码，方便所有人进入，但也很危险，希望您不要爆破小破站。</p><p>每天备份一次，最大限度挽救损失。</p><h2 id="Rules">Rules</h2><p>在每一条信息下方，请使用 7 个 <code>_</code> 作为结束符，每一行结束后要空一行，并在开头写上您的昵称。</p><p>最后一行不用空行，最好写上时间。</p><p>例如：</p><hr><p>PuJunXi：</p><p>欢迎大家来到这里呀！</p><p>2024.2.4 14:55:27</p><hr><h2 id="聊天区">聊天区</h2><hr><p>PuJunXi：</p><p>欢迎大家来到这里呀！</p><p>2024.2.4 14:55:27</p><hr>]]></content>
-    
-    
-    
-    <tags>
-      
-      <tag>Mix</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>AtCoder ABC213D Takahashi Tour Solution</title>
     <link href="/2024/02/03/solution/AtCoder-ABC213D-Takahashi-Tour-Solution/"/>
     <url>/2024/02/03/solution/AtCoder-ABC213D-Takahashi-Tour-Solution/</url>
