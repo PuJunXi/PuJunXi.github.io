@@ -16,15 +16,15 @@
   <meta name="author" content="PuJunXi">
   <meta name="keywords" content="">
   
-    <meta name="description" content="P1700 [USACO19OPEN] Milk Factory B Solution Portal 题意 一张有向图，有 nnn 个点，n−1n-1n−1 条边，求一个所有点都能到的点，且编号最小，无解输出 −1-1−1。 思路 由于数据较小（1≤n≤1001\leq n\leq1001≤n≤100），所以可以暴力。 每个点都能到达，也就是从一个点搜到的所有点的数量是 n−1n-1n−1。 建立">
+    <meta name="description" content="CF1931B Make Equal Solution Portal(CF) Portal(Luogu) 思路 类似于 P1031，而且该题只问是否可行，于是按描述模拟即可。 算出平均值，拿一个变量当中转站，用来存之前剩的。 只枚举一遍，时间复杂度 O(Tn)\mathcal O(Tn)O(Tn)。 Code 12345678910111213141516171819202122232425262">
 <meta property="og:type" content="article">
-<meta property="og:title" content="P1700 [USACO19OPEN] Milk Factory B Solution">
-<meta property="og:url" content="https://pujunxi.github.io/2024/01/23/solution/P1700-[USACO19OPEN]-Milk-Factory-B-Solution/index.html">
+<meta property="og:title" content="CF1931B Make Equal Solution">
+<meta property="og:url" content="https://pujunxi.github.io/2024/03/09/solution/CF1931B-Make-Equal-Solution/index.html">
 <meta property="og:site_name" content="PuJunXi&#39;s Blog">
-<meta property="og:description" content="P1700 [USACO19OPEN] Milk Factory B Solution Portal 题意 一张有向图，有 nnn 个点，n−1n-1n−1 条边，求一个所有点都能到的点，且编号最小，无解输出 −1-1−1。 思路 由于数据较小（1≤n≤1001\leq n\leq1001≤n≤100），所以可以暴力。 每个点都能到达，也就是从一个点搜到的所有点的数量是 n−1n-1n−1。 建立">
+<meta property="og:description" content="CF1931B Make Equal Solution Portal(CF) Portal(Luogu) 思路 类似于 P1031，而且该题只问是否可行，于是按描述模拟即可。 算出平均值，拿一个变量当中转站，用来存之前剩的。 只枚举一遍，时间复杂度 O(Tn)\mathcal O(Tn)O(Tn)。 Code 12345678910111213141516171819202122232425262">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-01-23T06:46:11.000Z">
-<meta property="article:modified_time" content="2024-02-01T07:56:13.357Z">
+<meta property="article:published_time" content="2024-03-09T08:24:01.053Z">
+<meta property="article:modified_time" content="2024-03-09T08:24:01.124Z">
 <meta property="article:author" content="PuJunXi">
 <meta property="article:tag" content="Solution">
 <meta name="twitter:card" content="summary_large_image">
@@ -33,7 +33,7 @@
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>P1700 [USACO19OPEN] Milk Factory B Solution - PuJunXi&#39;s Blog</title>
+  <title>CF1931B Make Equal Solution - PuJunXi&#39;s Blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -244,7 +244,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="P1700 [USACO19OPEN] Milk Factory B Solution"></span>
+            <span id="subtitle" data-typed-text="CF1931B Make Equal Solution"></span>
           
         </div>
 
@@ -255,8 +255,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-01-23 14:46" pubdate>
-          2024年1月23日 下午
+        <time datetime="2024-03-09 16:24" pubdate>
+          2024年3月9日 下午
         </time>
       </span>
     
@@ -267,7 +267,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          311 字
+          194 字
         
       </span>
     
@@ -278,7 +278,7 @@
         
         
         
-          3 分钟
+          2 分钟
         
       </span>
     
@@ -323,22 +323,20 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">P1700 [USACO19OPEN] Milk Factory B Solution</h1>
+            <h1 id="seo-header">CF1931B Make Equal Solution</h1>
             
             
               <div class="markdown-body">
                 
-                <h1>P1700 [USACO19OPEN] Milk Factory B Solution</h1>
-<p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1700">Portal</a></p>
-<h2 id="题意">题意</h2>
-<p>一张有向图，有 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">n</span></span></span></span> 个点，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">n-1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6667em;vertical-align:-0.0833em;"></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span></span></span></span> 条边，求一个所有点都能到的点，且编号最小，无解输出 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">-1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">−</span><span class="mord">1</span></span></span></span>。</p>
+                <h1>CF1931B Make Equal Solution</h1>
+<p><a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/1931/B">Portal(CF)</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/CF1931B">Portal(Luogu)</a></p>
 <h2 id="思路">思路</h2>
-<p>由于数据较小（<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>≤</mo><mi>n</mi><mo>≤</mo><mn>100</mn></mrow><annotation encoding="application/x-tex">1\leq n\leq100</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7804em;vertical-align:-0.136em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7719em;vertical-align:-0.136em;"></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">100</span></span></span></span>），所以可以暴力。</p>
-<p>每个点都能到达，也就是从一个点搜到的所有点的数量是 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">n-1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6667em;vertical-align:-0.0833em;"></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span></span></span></span>。</p>
-<p>建立一个桶，存放每个点被搜到的次数。</p>
-<p>如果满足条件则直接输出，因为枚举桶的顺序保证答案最小。</p>
+<p>类似于 <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1031">P1031</a>，而且该题只问是否可行，于是按描述模拟即可。</p>
+<p>算出平均值，拿一个变量当中转站，用来存之前剩的。</p>
+<p>只枚举一遍，时间复杂度 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="script">O</mi><mo stretchy="false">(</mo><mi>T</mi><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\mathcal O(Tn)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathcal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span>。</p>
 <h2 id="Code">Code</h2>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;cstdio&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;cstring&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;vector&gt;</span></span><br>std::vector &lt;std::vector&lt;<span class="hljs-type">int</span>&gt;&gt; g;  <span class="hljs-comment">// 邻接表</span><br>std::vector &lt;<span class="hljs-type">int</span>&gt; f;  <span class="hljs-comment">// 桶</span><br><span class="hljs-type">bool</span> vis[<span class="hljs-number">105</span>];  <span class="hljs-comment">// 标记</span><br><span class="hljs-type">int</span> n,u,v;<br><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">dfs</span><span class="hljs-params">(<span class="hljs-type">int</span> u)</span></span>&#123;  <span class="hljs-comment">// 深搜</span><br>    <span class="hljs-keyword">if</span>(vis[u]) <span class="hljs-keyword">return</span>;<br>    vis[u]=<span class="hljs-number">1</span>;<br>    <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">0</span>;i&lt;g[u].<span class="hljs-built_in">size</span>();i++)&#123;<br>        f[g[u][i]]++;  <span class="hljs-comment">// 对应桶加1</span><br>        <span class="hljs-built_in">dfs</span>(g[u][i]);<br>    &#125;<br>&#125;<br><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">solve</span><span class="hljs-params">()</span></span>&#123;<br>    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d&quot;</span>,&amp;n);<br>    f.<span class="hljs-built_in">resize</span>(n+<span class="hljs-number">1</span>,<span class="hljs-number">0</span>);<br>    g.<span class="hljs-built_in">resize</span>(n+<span class="hljs-number">1</span>);<br>    <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">1</span>;i&lt;n;i++)&#123;<br>        <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d%d&quot;</span>,&amp;u,&amp;v);<br>        g[u].<span class="hljs-built_in">push_back</span>(v);  <span class="hljs-comment">// 建边</span><br>    &#125;<br>    <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">1</span>;i&lt;=n;i++)&#123;<br>        <span class="hljs-built_in">memset</span>(vis,<span class="hljs-number">0</span>,<span class="hljs-built_in">sizeof</span>(vis));  <span class="hljs-comment">// 每搜一遍要清空</span><br>        <span class="hljs-built_in">dfs</span>(i); <br>    &#125;<br>    <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">1</span>;i&lt;=n;i++)&#123;<br>        <span class="hljs-keyword">if</span>(f[i]==n<span class="hljs-number">-1</span>)&#123;  <span class="hljs-comment">// 满足条件</span><br>            <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%d&quot;</span>,i);<br>            <span class="hljs-keyword">return</span>;<br>        &#125;<br>    &#125;<br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;-1&quot;</span>); <span class="hljs-comment">//  无解</span><br>&#125;<br><span class="hljs-function"><span class="hljs-type">signed</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>&#123;<br>    <span class="hljs-built_in">solve</span>();<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;bits/stdc++.h&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">define</span> ll long long</span><br><span class="hljs-meta">#<span class="hljs-keyword">define</span> YES cout&lt;&lt;<span class="hljs-string">&quot;Yes&quot;</span>&lt;&lt;endl;</span><br><span class="hljs-meta">#<span class="hljs-keyword">define</span> NO cout&lt;&lt;<span class="hljs-string">&quot;No&quot;</span>&lt;&lt;endl;</span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><span class="hljs-type">const</span> <span class="hljs-type">int</span> SIZE=<span class="hljs-number">2e5</span>;<br><span class="hljs-function"><span class="hljs-type">signed</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>&#123;<br>	ios::<span class="hljs-built_in">sync_with_stdio</span>(<span class="hljs-number">0</span>);<br>	<span class="hljs-type">int</span> t;<br>	cin&gt;&gt;t;<br>	<span class="hljs-keyword">while</span>(t--)&#123;<br>		<span class="hljs-type">int</span> n,a[SIZE+<span class="hljs-number">5</span>],d=<span class="hljs-number">0</span>;<br>		ll sum=<span class="hljs-number">0</span>;<br>		<span class="hljs-type">bool</span> f=<span class="hljs-number">0</span>;<br>		cin&gt;&gt;n;<br>		<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">1</span>;i&lt;=n;i++)&#123;<br>			cin&gt;&gt;a[i];<br>			sum+=a[i];<br>		&#125;<br>		sum/=n;<br>		<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">1</span>;i&lt;=n;i++)&#123;<br>			<span class="hljs-keyword">if</span>(a[i]==sum) <span class="hljs-keyword">continue</span>;<br>			<span class="hljs-keyword">if</span>(a[i]&lt;sum)&#123;<br>				d-=sum-a[i];<br>				<span class="hljs-keyword">if</span>(d&lt;<span class="hljs-number">0</span>)&#123;f=<span class="hljs-number">1</span>;<span class="hljs-keyword">break</span>;&#125;<br>				a[i]=sum;<br>			&#125;<br>			<span class="hljs-keyword">else</span>&#123;<br>				d+=a[i]-sum;<br>				a[i]=sum;<br>			&#125;<br>		&#125;<br>		<span class="hljs-keyword">if</span>(f) NO<br>		<span class="hljs-keyword">else</span> YES<br>	&#125;<br>	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
                 
               </div>
             
@@ -362,8 +360,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>P1700 [USACO19OPEN] Milk Factory B Solution</div>
-      <div>https://pujunxi.github.io/2024/01/23/solution/P1700-[USACO19OPEN]-Milk-Factory-B-Solution/</div>
+      <div>CF1931B Make Equal Solution</div>
+      <div>https://pujunxi.github.io/2024/03/09/solution/CF1931B-Make-Equal-Solution/</div>
     </div>
     <div class="license-meta">
       
@@ -375,13 +373,13 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年1月23日</div>
+          <div>2024年3月9日</div>
         </div>
       
       
         <div class="license-meta-item license-meta-date">
           <div>更新于</div>
-          <div>2024年2月1日</div>
+          <div>2024年3月9日</div>
         </div>
       
       
@@ -424,9 +422,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2024/01/23/record/Record-2nd/" title="Record 2nd">
+                      <a href="/2024/03/09/solution/CF1926C-Vlad-and-a-Sum-of-Sum-of-Digits-Solution/" title="CF1926C Vlad and a Sum of Sum of Digits Solution">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Record 2nd</span>
+                        <span class="hidden-mobile">CF1926C Vlad and a Sum of Sum of Digits Solution</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -434,8 +432,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2024/01/22/solution/UVA11518-Dominos-2-Solution/" title="UVA11518 Dominos 2 Solution">
-                        <span class="hidden-mobile">UVA11518 Dominos 2 Solution</span>
+                      <a href="/2024/03/09/solution/CF1927B-Following-the-String-Solution/" title="CF1927B Following the String Solution">
+                        <span class="hidden-mobile">CF1927B Following the String Solution</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
