@@ -4,6 +4,25 @@
   
   
   <entry>
+    <title>Luogu B3940 [GESP样题 四级] 填幻方 Solution</title>
+    <link href="/2024/03/20/solution/Luogu-B3940-%5BGESP%E6%A0%B7%E9%A2%98-%E5%9B%9B%E7%BA%A7%5D-%E5%A1%AB%E5%B9%BB%E6%96%B9-Solution/"/>
+    <url>/2024/03/20/solution/Luogu-B3940-%5BGESP%E6%A0%B7%E9%A2%98-%E5%9B%9B%E7%BA%A7%5D-%E5%A1%AB%E5%B9%BB%E6%96%B9-Solution/</url>
+    
+    <content type="html"><![CDATA[<h1>Luogu B3940 [GESP样题 四级] 填幻方 Solution</h1><p><a href="https://www.luogu.com.cn/problem/B3940">Portal</a></p><p>双倍经验：</p><p><a href="https://www.luogu.com.cn/problem/P2615">P2615 [NOIP2015 提高组] 神奇的幻方</a></p><p>题意已经非常清楚了，只需要认真读题，按照题意模拟即可。</p><p>注意！</p><blockquote><p><strong>从上次填数字的位置</strong></p></blockquote><p>所以要存一个上次的坐标，<a href="https://www.luogu.com.cn/discuss/790727">有帖为证</a>。</p><p><a href="https://paste.ubuntu.com/p/CX5vWTMFfJ/">代码</a>。</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>Solution</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Luogu P10250 [GESP样题 六级] 下楼梯 Solution</title>
     <link href="/2024/03/18/solution/Luogu-P10250-%5BGESP%E6%A0%B7%E9%A2%98-%E5%85%AD%E7%BA%A7%5D-%E4%B8%8B%E6%A5%BC%E6%A2%AF-Solution/"/>
     <url>/2024/03/18/solution/Luogu-P10250-%5BGESP%E6%A0%B7%E9%A2%98-%E5%85%AD%E7%BA%A7%5D-%E4%B8%8B%E6%A5%BC%E6%A2%AF-Solution/</url>
