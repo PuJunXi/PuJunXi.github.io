@@ -16,24 +16,24 @@
   <meta name="author" content="PuJunXi">
   <meta name="keywords" content="">
   
-    <meta name="description" content="Luogu B3940 [GESP样题 四级] 填幻方 Solution Portal 双倍经验： P2615 [NOIP2015 提高组] 神奇的幻方 题意已经非常清楚了，只需要认真读题，按照题意模拟即可。 注意！  从上次填数字的位置  所以要存一个上次的坐标，有帖为证。 代码。">
+    <meta name="description" content="Codeforces 做题记录 CF911A Nearest Minimums 模拟，先找最小值，找出所有的位置，再求最小的距离差。 Code。 CF712B Memory and Trident 由于要回到原点，左右抵消，上下抵消。 如果 ∣S∣|S|∣S∣ 是奇数，肯定无解。 然后统计上下左右个数，∣U−D∣2+∣L−R∣2\frac{|U-D|}{2}+\frac{|L-R|}{2}2∣U−">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Luogu B3940 [GESP样题 四级] 填幻方 Solution">
-<meta property="og:url" content="https://pujunxi.github.io/2024/03/20/solution/Luogu-B3940-[GESP%E6%A0%B7%E9%A2%98-%E5%9B%9B%E7%BA%A7]-%E5%A1%AB%E5%B9%BB%E6%96%B9-Solution/index.html">
+<meta property="og:title" content="Codeforces 做题记录">
+<meta property="og:url" content="https://pujunxi.github.io/2024/03/25/record/Codeforces%20%E5%81%9A%E9%A2%98%E8%AE%B0%E5%BD%95/index.html">
 <meta property="og:site_name" content="PuJunXi&#39;s Blog">
-<meta property="og:description" content="Luogu B3940 [GESP样题 四级] 填幻方 Solution Portal 双倍经验： P2615 [NOIP2015 提高组] 神奇的幻方 题意已经非常清楚了，只需要认真读题，按照题意模拟即可。 注意！  从上次填数字的位置  所以要存一个上次的坐标，有帖为证。 代码。">
+<meta property="og:description" content="Codeforces 做题记录 CF911A Nearest Minimums 模拟，先找最小值，找出所有的位置，再求最小的距离差。 Code。 CF712B Memory and Trident 由于要回到原点，左右抵消，上下抵消。 如果 ∣S∣|S|∣S∣ 是奇数，肯定无解。 然后统计上下左右个数，∣U−D∣2+∣L−R∣2\frac{|U-D|}{2}+\frac{|L-R|}{2}2∣U−">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-03-20T13:48:23.840Z">
-<meta property="article:modified_time" content="2024-03-20T13:48:23.881Z">
+<meta property="article:published_time" content="2024-03-25T13:49:44.837Z">
+<meta property="article:modified_time" content="2024-03-25T13:52:33.095Z">
 <meta property="article:author" content="PuJunXi">
-<meta property="article:tag" content="Solution">
+<meta property="article:tag" content="Record">
 <meta name="twitter:card" content="summary_large_image">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>Luogu B3940 [GESP样题 四级] 填幻方 Solution - PuJunXi&#39;s Blog</title>
+  <title>Codeforces 做题记录 - PuJunXi&#39;s Blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -244,7 +244,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Luogu B3940 [GESP样题 四级] 填幻方 Solution"></span>
+            <span id="subtitle" data-typed-text="Codeforces 做题记录"></span>
           
         </div>
 
@@ -255,8 +255,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-03-20 21:48" pubdate>
-          2024年3月20日 晚上
+        <time datetime="2024-03-25 21:49" pubdate>
+          2024年3月25日 晚上
         </time>
       </span>
     
@@ -267,7 +267,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          76 字
+          237 字
         
       </span>
     
@@ -278,7 +278,7 @@
         
         
         
-          1 分钟
+          2 分钟
         
       </span>
     
@@ -323,22 +323,37 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">Luogu B3940 [GESP样题 四级] 填幻方 Solution</h1>
+            <h1 id="seo-header">Codeforces 做题记录</h1>
             
             
               <div class="markdown-body">
                 
-                <h1>Luogu B3940 [GESP样题 四级] 填幻方 Solution</h1>
-<p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/B3940">Portal</a></p>
-<p>双倍经验：</p>
-<p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P2615">P2615 [NOIP2015 提高组] 神奇的幻方</a></p>
-<p>题意已经非常清楚了，只需要认真读题，按照题意模拟即可。</p>
-<p>注意！</p>
-<blockquote>
-<p><strong>从上次填数字的位置</strong></p>
-</blockquote>
-<p>所以要存一个上次的坐标，<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/discuss/790727">有帖为证</a>。</p>
-<p><a target="_blank" rel="noopener" href="https://paste.ubuntu.com/p/CX5vWTMFfJ/">代码</a>。</p>
+                <h1>Codeforces 做题记录</h1>
+<h3 id="CF911A-Nearest-Minimums"><a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/911/A">CF911A Nearest Minimums</a></h3>
+<p>模拟，先找最小值，找出所有的位置，再求最小的距离差。</p>
+<p><a target="_blank" rel="noopener" href="https://codeforces.com/contest/911/submission/244343437">Code</a>。</p>
+<h3 id="CF712B-Memory-and-Trident"><a target="_blank" rel="noopener" href="http://codeforces.com/problemset/problem/712/B">CF712B Memory and Trident</a></h3>
+<p>由于要回到原点，左右抵消，上下抵消。</p>
+<p>如果 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">∣</mi><mi>S</mi><mi mathvariant="normal">∣</mi></mrow><annotation encoding="application/x-tex">|S|</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">∣</span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="mord">∣</span></span></span></span> 是奇数，肯定无解。</p>
+<p>然后统计上下左右个数，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mi mathvariant="normal">∣</mi><mi>U</mi><mo>−</mo><mi>D</mi><mi mathvariant="normal">∣</mi></mrow><mn>2</mn></mfrac><mo>+</mo><mfrac><mrow><mi mathvariant="normal">∣</mi><mi>L</mi><mo>−</mo><mi>R</mi><mi mathvariant="normal">∣</mi></mrow><mn>2</mn></mfrac></mrow><annotation encoding="application/x-tex">\frac{|U-D|}{2}+\frac{|L-R|}{2}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.355em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.01em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.485em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">∣</span><span class="mord mathnormal mtight" style="margin-right:0.10903em;">U</span><span class="mbin mtight">−</span><span class="mord mathnormal mtight" style="margin-right:0.02778em;">D</span><span class="mord mtight">∣</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1.355em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.01em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.485em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">∣</span><span class="mord mathnormal mtight">L</span><span class="mbin mtight">−</span><span class="mord mathnormal mtight" style="margin-right:0.00773em;">R</span><span class="mord mtight">∣</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span> 就是修改个数。</p>
+<p><a target="_blank" rel="noopener" href="https://codeforces.com/contest/712/submission/241937107">Code</a>。</p>
+<h3 id="CF708A-Letters-Cyclic-Shift"><a target="_blank" rel="noopener" href="http://codeforces.com/problemset/problem/708/A">CF708A Letters Cyclic Shift</a></h3>
+<p>从 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="monospace">a</mi></mrow><annotation encoding="application/x-tex">\mathtt{a}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathtt">a</span></span></span></span> 到 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="monospace">z</mi></mrow><annotation encoding="application/x-tex">\mathtt{z}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathtt">z</span></span></span></span> 显然不优，于是把每个非 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="monospace">a</mi></mrow><annotation encoding="application/x-tex">\mathtt{a}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathtt">a</span></span></span></span> 的减 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span></span></span></span>。</p>
+<p>要特判全 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="monospace">a</mi></mrow><annotation encoding="application/x-tex">\mathtt{a}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathtt">a</span></span></span></span> 的情况，因为是 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi></mrow><annotation encoding="application/x-tex">s</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">s</span></span></span></span> 的<strong>非空子串</strong>，所以把 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>s</mi><mi>n</mi></msub></mrow><annotation encoding="application/x-tex">s_n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5806em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">s</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 变成 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="monospace">z</mi></mrow><annotation encoding="application/x-tex">\mathtt{z}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathtt">z</span></span></span></span>。</p>
+<p><a target="_blank" rel="noopener" href="https://codeforces.com/contest/708/submission/241935665">Code</a>。</p>
+<h3 id="CF706B-Interesting-drink"><a target="_blank" rel="noopener" href="http://codeforces.com/problemset/problem/706/B">CF706B Interesting drink</a></h3>
+<p>对商铺排序，考虑二分，左区间长度即为 Vasiliy 能买的饮料数。</p>
+<p><a target="_blank" rel="noopener" href="https://codeforces.com/contest/706/submission/241934577">Code</a>。</p>
+<h3 id="CF435A-Queue-on-Bus-Stop"><a target="_blank" rel="noopener" href="http://codeforces.com/problemset/problem/435/A">CF435A Queue on Bus Stop</a></h3>
+<p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1181">双倍经验</a></p>
+<p>模拟，能装就装，大了就清空，巴士个数加 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span></span></span></span>。</p>
+<p><a target="_blank" rel="noopener" href="https://codeforces.com/contest/435/submission/242975838">Code</a>。</p>
+<h3 id="CF287A-IQ-Test"><a target="_blank" rel="noopener" href="http://codeforces.com/problemset/problem/287/A">CF287A IQ Test</a></h3>
+<p>只需要一个 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mo>×</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">2\times 2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">2</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">2</span></span></span></span> 的格子，所以只要暴力判断是否含任意 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3</mn></mrow><annotation encoding="application/x-tex">3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">3</span></span></span></span> 种即可。</p>
+<p><a target="_blank" rel="noopener" href="https://codeforces.com/contest/287/submission/241686465">Code</a>。</p>
+<h3 id="CF275A"><a target="_blank" rel="noopener" href="http://codeforces.com/problemset/problem/275/A">CF275A</a></h3>
+<p>直接模拟，不用多说。</p>
+<p><a target="_blank" rel="noopener" href="https://codeforces.com/contest/275/submission/241550459">Code</a>。</p>
 
                 
               </div>
@@ -351,7 +366,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/Solution/" class="print-no-link">#Solution</a>
+        <a href="/tags/Record/" class="print-no-link">#Record</a>
       
     </div>
   
@@ -363,8 +378,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Luogu B3940 [GESP样题 四级] 填幻方 Solution</div>
-      <div>https://pujunxi.github.io/2024/03/20/solution/Luogu-B3940-[GESP样题-四级]-填幻方-Solution/</div>
+      <div>Codeforces 做题记录</div>
+      <div>https://pujunxi.github.io/2024/03/25/record/Codeforces 做题记录/</div>
     </div>
     <div class="license-meta">
       
@@ -376,13 +391,13 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年3月20日</div>
+          <div>2024年3月25日</div>
         </div>
       
       
         <div class="license-meta-item license-meta-date">
           <div>更新于</div>
-          <div>2024年3月20日</div>
+          <div>2024年3月25日</div>
         </div>
       
       
@@ -425,18 +440,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2024/03/25/record/Codeforces%20%E5%81%9A%E9%A2%98%E8%AE%B0%E5%BD%95/" title="Codeforces 做题记录">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Codeforces 做题记录</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2024/03/18/solution/Luogu-P10250-%5BGESP%E6%A0%B7%E9%A2%98-%E5%85%AD%E7%BA%A7%5D-%E4%B8%8B%E6%A5%BC%E6%A2%AF-Solution/" title="Luogu P10250 [GESP样题 六级] 下楼梯 Solution">
-                        <span class="hidden-mobile">Luogu P10250 [GESP样题 六级] 下楼梯 Solution</span>
+                      <a href="/2024/03/20/solution/Luogu-B3940-%5BGESP%E6%A0%B7%E9%A2%98-%E5%9B%9B%E7%BA%A7%5D-%E5%A1%AB%E5%B9%BB%E6%96%B9-Solution/" title="Luogu B3940 [GESP样题 四级] 填幻方 Solution">
+                        <span class="hidden-mobile">Luogu B3940 [GESP样题 四级] 填幻方 Solution</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
